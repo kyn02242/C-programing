@@ -4,7 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace C썁_프로젝트_이게_진짜
+namespace conveni
 {
     static class Program
     {
@@ -17,7 +17,7 @@ namespace C썁_프로젝트_이게_진짜
             Application.SetHighDpiMode(HighDpiMode.SystemAware);
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1());
+            Application.Run(new MainMenu());
         }
     }
 }

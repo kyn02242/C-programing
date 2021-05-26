@@ -8,12 +8,12 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace C썁_프로젝트_이게_진짜
+namespace conveni
 {
-    public partial class Form1 : Form
+    public partial class MainMenu : Form
     {
         bool ExitBtnClosing = false;
-        public Form1()
+        public MainMenu()
         {
             InitializeComponent();
         }
@@ -58,8 +58,9 @@ namespace C썁_프로젝트_이게_진짜
 
         }
 
+        private void MainMenu_Load(object sender, EventArgs e)
+        {
 
-
-
+        }
     }
 }

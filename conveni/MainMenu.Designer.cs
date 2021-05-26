@@ -1,7 +1,7 @@
 ﻿
-namespace C썁_프로젝트_이게_진짜
+namespace conveni
 {
-    partial class Form1
+    partial class MainMenu
     {
         /// <summary>
         ///  Required designer variable.
@@ -195,7 +195,7 @@ namespace C썁_프로젝트_이게_진짜
             this.Wait3.Text = "대기3";
             this.Wait3.UseVisualStyleBackColor = true;
             // 
-            // Form1
+            // MainMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -215,8 +215,9 @@ namespace C썁_프로젝트_이게_진짜
             this.Controls.Add(this.Storage);
             this.Controls.Add(this.Personnel);
             this.Controls.Add(this.Calculate);
-            this.Name = "Form1";
+            this.Name = "MainMenu";
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.MainMenu_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
