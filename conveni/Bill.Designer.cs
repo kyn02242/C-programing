@@ -31,12 +31,12 @@ namespace conveni
         {
             this.label3 = new System.Windows.Forms.Label();
             this.Change = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.listBox1 = new System.Windows.Forms.ListBox();
             this.listBox2 = new System.Windows.Forms.ListBox();
             this.listView1 = new System.Windows.Forms.ListView();
             this.button3 = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label3
@@ -52,21 +52,12 @@ namespace conveni
             // 
             // Change
             // 
-            this.Change.Location = new System.Drawing.Point(801, 254);
+            this.Change.Location = new System.Drawing.Point(790, 421);
             this.Change.Name = "Change";
             this.Change.Size = new System.Drawing.Size(198, 65);
             this.Change.TabIndex = 14;
-            this.Change.Text = "현금";
+            this.Change.Text = "결제하기";
             this.Change.UseVisualStyleBackColor = true;
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(801, 349);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(198, 65);
-            this.button1.TabIndex = 15;
-            this.button1.Text = "카드";
-            this.button1.UseVisualStyleBackColor = true;
             // 
             // button2
             // 
@@ -96,7 +87,7 @@ namespace conveni
             "",
             "결제할 금액",
             "거스름돈"});
-            this.listBox2.Location = new System.Drawing.Point(427, 573);
+            this.listBox2.Location = new System.Drawing.Point(554, 183);
             this.listBox2.Name = "listBox2";
             this.listBox2.Size = new System.Drawing.Size(169, 132);
             this.listBox2.TabIndex = 20;
@@ -105,7 +96,7 @@ namespace conveni
             // listView1
             // 
             this.listView1.HideSelection = false;
-            this.listView1.Location = new System.Drawing.Point(591, 573);
+            this.listView1.Location = new System.Drawing.Point(718, 183);
             this.listView1.Name = "listView1";
             this.listView1.Size = new System.Drawing.Size(230, 132);
             this.listView1.TabIndex = 21;
@@ -120,17 +111,26 @@ namespace conveni
             this.button3.Text = "결제 취소";
             this.button3.UseVisualStyleBackColor = true;
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(554, 421);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(198, 65);
+            this.button1.TabIndex = 23;
+            this.button1.Text = "금액 투입";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
             // Bill
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1052, 852);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.listView1);
             this.Controls.Add(this.listBox2);
             this.Controls.Add(this.listBox1);
             this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
             this.Controls.Add(this.Change);
             this.Controls.Add(this.label3);
             this.Name = "Bill";
@@ -145,11 +145,11 @@ namespace conveni
 
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button Change;
-        private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.ListBox listBox1;
         private System.Windows.Forms.ListBox listBox2;
         private System.Windows.Forms.ListView listView1;
         private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button button1;
     }
 }
