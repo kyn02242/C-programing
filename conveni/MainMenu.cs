@@ -27,12 +27,14 @@ namespace conveni
 
         private void Personnel_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("making!");
+            Employee EMPLOYEE = new Employee();
+            EMPLOYEE.ShowDialog();
         }
 
         private void Storage_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("All right");
+            Goods GOODS = new Goods();
+            GOODS.ShowDialog();
         }
         private void Exit_Click(object sender, EventArgs e)
         {
