@@ -21,7 +21,8 @@ namespace conveni
 
         private void Calculate_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Hello!");
+            Bill showBill = new Bill();
+            showBill.ShowDialog();
         }
 
         private void Personnel_Click(object sender, EventArgs e)
