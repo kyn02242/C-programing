@@ -15,6 +15,14 @@ namespace conveni
         public Bill()
         {
             InitializeComponent();
+
+            DataTable BillTable = new DataTable();
+            string str = "hello";
+
+            BillTable.Columns.Add("hello");
+            BillTable.Columns.Add("hello2");
+            BillTable.Columns.Add("hello3");
+            Billshow.DataSource = BillTable;
         }
 
         private void Bill_Load(object sender, EventArgs e)
@@ -28,6 +36,16 @@ namespace conveni
         }
 
         private void button3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Billshow_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
         }

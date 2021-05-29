@@ -65,5 +65,10 @@ namespace conveni
         {
 
         }
+
+        private void listView2_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
