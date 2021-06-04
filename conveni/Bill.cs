@@ -12,6 +12,7 @@ namespace conveni
 {
     public partial class Bill : Form
     {
+       
         public Bill()
         {
             InitializeComponent();
@@ -35,9 +36,15 @@ namespace conveni
 
         }
 
-        private void button3_Click(object sender, EventArgs e)
+        private void exit_Click(object sender, EventArgs e)
         {
-
+            bool ExitBtnClosing;
+            if (MessageBox.Show("결제 취소하시겠습니까?", "결제 취소", MessageBoxButtons.YesNo) == DialogResult.Yes)
+            {
+                ExitBtnClosing = true;
+                this.DialogResult = DialogResult.Abort;
+                Close();
+            }
         }
 
         private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
@@ -48,6 +55,22 @@ namespace conveni
         private void Billshow_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Change_Click(object sender, EventArgs e)
+        {
+            bool ExitBtnClosing;
+            if (MessageBox.Show("결제 하시겠습니까?", "결제 확인", MessageBoxButtons.YesNo) == DialogResult.Yes)
+            {
+                ExitBtnClosing = true;
+                this.DialogResult = DialogResult.Abort;
+                Close();
+            }
         }
     }
 }

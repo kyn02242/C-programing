@@ -31,15 +31,16 @@ namespace conveni
         {
             this.label3 = new System.Windows.Forms.Label();
             this.Change = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.Waitexit = new System.Windows.Forms.Button();
             this.listBox2 = new System.Windows.Forms.ListBox();
             this.listView1 = new System.Windows.Forms.ListView();
-            this.button3 = new System.Windows.Forms.Button();
+            this.exit = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.Billshow = new System.Windows.Forms.DataGridView();
             this.상품이름 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.상품코드 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.가격 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.listView2 = new System.Windows.Forms.ListView();
             ((System.ComponentModel.ISupportInitialize)(this.Billshow)).BeginInit();
             this.SuspendLayout();
             // 
@@ -56,21 +57,23 @@ namespace conveni
             // 
             // Change
             // 
-            this.Change.Location = new System.Drawing.Point(790, 422);
+            this.Change.Location = new System.Drawing.Point(790, 599);
             this.Change.Name = "Change";
             this.Change.Size = new System.Drawing.Size(199, 65);
             this.Change.TabIndex = 14;
             this.Change.Text = "결제하기";
             this.Change.UseVisualStyleBackColor = true;
+            this.Change.Click += new System.EventHandler(this.Change_Click);
             // 
-            // button2
+            // Waitexit
             // 
-            this.button2.Location = new System.Drawing.Point(801, 738);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(110, 65);
-            this.button2.TabIndex = 16;
-            this.button2.Text = "대기";
-            this.button2.UseVisualStyleBackColor = true;
+            this.Waitexit.Location = new System.Drawing.Point(801, 738);
+            this.Waitexit.Name = "Waitexit";
+            this.Waitexit.Size = new System.Drawing.Size(110, 65);
+            this.Waitexit.TabIndex = 16;
+            this.Waitexit.Text = "대기";
+            this.Waitexit.UseVisualStyleBackColor = true;
+            this.Waitexit.Click += new System.EventHandler(this.button2_Click);
             // 
             // listBox2
             // 
@@ -82,7 +85,7 @@ namespace conveni
             "",
             "결제할 금액",
             "거스름돈"});
-            this.listBox2.Location = new System.Drawing.Point(572, 183);
+            this.listBox2.Location = new System.Drawing.Point(553, 437);
             this.listBox2.Name = "listBox2";
             this.listBox2.Size = new System.Drawing.Size(170, 132);
             this.listBox2.TabIndex = 20;
@@ -91,25 +94,25 @@ namespace conveni
             // listView1
             // 
             this.listView1.HideSelection = false;
-            this.listView1.Location = new System.Drawing.Point(759, 183);
+            this.listView1.Location = new System.Drawing.Point(759, 437);
             this.listView1.Name = "listView1";
             this.listView1.Size = new System.Drawing.Size(230, 132);
             this.listView1.TabIndex = 21;
             this.listView1.UseCompatibleStateImageBehavior = false;
             // 
-            // button3
+            // exit
             // 
-            this.button3.Location = new System.Drawing.Point(934, 738);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(106, 65);
-            this.button3.TabIndex = 22;
-            this.button3.Text = "결제 취소";
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
+            this.exit.Location = new System.Drawing.Point(934, 738);
+            this.exit.Name = "exit";
+            this.exit.Size = new System.Drawing.Size(106, 65);
+            this.exit.TabIndex = 22;
+            this.exit.Text = "결제 취소";
+            this.exit.UseVisualStyleBackColor = true;
+            this.exit.Click += new System.EventHandler(this.exit_Click);
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(554, 422);
+            this.button1.Location = new System.Drawing.Point(553, 599);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(199, 65);
             this.button1.TabIndex = 23;
@@ -152,17 +155,28 @@ namespace conveni
             this.가격.Name = "가격";
             this.가격.Width = 150;
             // 
+            // listView2
+            // 
+            this.listView2.HideSelection = false;
+            this.listView2.Location = new System.Drawing.Point(553, 118);
+            this.listView2.Name = "listView2";
+            this.listView2.Size = new System.Drawing.Size(436, 284);
+            this.listView2.TabIndex = 26;
+            this.listView2.UseCompatibleStateImageBehavior = false;
+            this.listView2.View = System.Windows.Forms.View.List;
+            // 
             // Bill
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1051, 852);
+            this.Controls.Add(this.listView2);
             this.Controls.Add(this.Billshow);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.button3);
+            this.Controls.Add(this.exit);
             this.Controls.Add(this.listView1);
             this.Controls.Add(this.listBox2);
-            this.Controls.Add(this.button2);
+            this.Controls.Add(this.Waitexit);
             this.Controls.Add(this.Change);
             this.Controls.Add(this.label3);
             this.Name = "Bill";
@@ -178,14 +192,15 @@ namespace conveni
 
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button Change;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button Waitexit;
         private System.Windows.Forms.ListBox listBox2;
         private System.Windows.Forms.ListView listView1;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button exit;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.DataGridView Billshow;
         private System.Windows.Forms.DataGridViewTextBoxColumn 상품이름;
         private System.Windows.Forms.DataGridViewTextBoxColumn 상품코드;
         private System.Windows.Forms.DataGridViewTextBoxColumn 가격;
+        private System.Windows.Forms.ListView listView2;
     }
 }
