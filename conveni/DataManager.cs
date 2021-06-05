@@ -20,6 +20,19 @@ namespace conveni
             try
             {
                 string PersonnelOutput = File.ReadAllText(@"./Personnels.xml");
+                XElement PersonnelXElement = XElement.Parse(PersonnelOutput);
+                Personnels = (from item in PersonnelXElement.Descendants("personnel")
+                              select new Personnel()
+                {
+                    Id = int.Parse(item.Element("id").Value),
+                    Name = item.Element("name").Value,
+                    Date = item.Element("date").Value,
+                    WorkingTime = item.Element("workingtime").Value,
+                    Gender=item.Element("gender").Value,
+                    WorkedTime= int.Parse(item.Element("workedtime").Value)
+                }).ToList<Personnel>();
+                // 추가로 storage 구현을 여기서 사용자도 아마 여기서 할듯
+                //string usersOutput = File.
 
             }
             catch (FileNotFoundException)
@@ -29,12 +42,23 @@ namespace conveni
         }
         public static void Save()
         {
-            string PersonnelOutput = "";
-            PersonnelOutput += "<Personnels>\n";
+            string PersonnelsOutput = "";
+            PersonnelsOutput += "<Personnels>\n";
             foreach(var item in Personnels)
             {
+                PersonnelsOutput += "<personnel>\n";
+                PersonnelsOutput += "<id>" + item.Id + "</id>\n";
+                PersonnelsOutput += "<name>" + item.Name + "</name>\n";
+                PersonnelsOutput += "<date>" + item.Id + "</date>\n";
+                PersonnelsOutput += "<workingtime>" + item.WorkingTime + "</workingtime>\n";
+                PersonnelsOutput += "<gender>" + item.Gender + "</gender>\n";
+                PersonnelsOutput += "<workedtime>" + item.WorkedTime + "</workedtime>\n";
+                PersonnelsOutput += "</personnel>\n";
 
             }
+            PersonnelsOutput += "</Personnels>";
+
+            File.WriteAllText(@"./Personnels.xml",PersonnelsOutput);
         }
     }
 }
