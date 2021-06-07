@@ -19,11 +19,8 @@ namespace conveni
 
             DataTable BillTable = new DataTable();
             string str = "hello";
-
-            BillTable.Columns.Add("hello");
-            BillTable.Columns.Add("hello2");
-            BillTable.Columns.Add("hello3");
-            Billshow.DataSource = BillTable;
+            //dataGridView1.DataSource = DataManager.Goods;
+            //dataGridView2.DataSource = DataManager.receipts;
         }
 
         private void Bill_Load(object sender, EventArgs e)
@@ -71,6 +68,11 @@ namespace conveni
                 this.DialogResult = DialogResult.Abort;
                 Close();
             }
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }
