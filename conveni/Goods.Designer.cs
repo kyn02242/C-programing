@@ -30,11 +30,11 @@ namespace conveni
         private void InitializeComponent()
         {
             this.LIST_GOODS = new System.Windows.Forms.ListBox();
-            this.SEARCH_GOODS = new System.Windows.Forms.Button();
             this.ID_GOODS = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.ADD_GOODS = new System.Windows.Forms.Button();
             this.EXIT_GOODS = new System.Windows.Forms.Button();
+            this.SEARCH_GOODS = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // LIST_GOODS
@@ -46,16 +46,6 @@ namespace conveni
             this.LIST_GOODS.Size = new System.Drawing.Size(567, 424);
             this.LIST_GOODS.TabIndex = 0;
             this.LIST_GOODS.SelectedIndexChanged += new System.EventHandler(this.listBox1_SelectedIndexChanged);
-            // 
-            // SEARCH_GOODS
-            // 
-            this.SEARCH_GOODS.Location = new System.Drawing.Point(663, 50);
-            this.SEARCH_GOODS.Name = "SEARCH_GOODS";
-            this.SEARCH_GOODS.Size = new System.Drawing.Size(125, 46);
-            this.SEARCH_GOODS.TabIndex = 1;
-            this.SEARCH_GOODS.Text = "검색";
-            this.SEARCH_GOODS.UseVisualStyleBackColor = true;
-            this.SEARCH_GOODS.Click += new System.EventHandler(this.button1_Click);
             // 
             // ID_GOODS
             // 
@@ -95,16 +85,26 @@ namespace conveni
             this.EXIT_GOODS.UseVisualStyleBackColor = true;
             this.EXIT_GOODS.Click += new System.EventHandler(this.EXIT_GOODS_Click);
             // 
+            // SEARCH_GOODS
+            // 
+            this.SEARCH_GOODS.Location = new System.Drawing.Point(674, 50);
+            this.SEARCH_GOODS.Name = "SEARCH_GOODS";
+            this.SEARCH_GOODS.Size = new System.Drawing.Size(114, 44);
+            this.SEARCH_GOODS.TabIndex = 7;
+            this.SEARCH_GOODS.Text = "검색";
+            this.SEARCH_GOODS.UseVisualStyleBackColor = true;
+            this.SEARCH_GOODS.Click += new System.EventHandler(this.SEARCH_GOODS_Click);
+            // 
             // Goods
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.SEARCH_GOODS);
             this.Controls.Add(this.EXIT_GOODS);
             this.Controls.Add(this.ADD_GOODS);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.ID_GOODS);
-            this.Controls.Add(this.SEARCH_GOODS);
             this.Controls.Add(this.LIST_GOODS);
             this.Name = "Goods";
             this.Text = "Goods";
@@ -116,10 +116,10 @@ namespace conveni
         #endregion
 
         private System.Windows.Forms.ListBox LIST_GOODS;
-        private System.Windows.Forms.Button SEARCH_GOODS;
         private System.Windows.Forms.TextBox ID_GOODS;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button ADD_GOODS;
         private System.Windows.Forms.Button EXIT_GOODS;
+        private System.Windows.Forms.Button SEARCH_GOODS;
     }
 }
