@@ -64,6 +64,7 @@ namespace conveni
             bool ExitBtnClosing;
             if (MessageBox.Show("결제 하시겠습니까?", "결제 확인", MessageBoxButtons.YesNo) == DialogResult.Yes)
             {
+
                 ExitBtnClosing = true;
                 this.DialogResult = DialogResult.Abort;
                 Close();

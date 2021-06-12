@@ -16,5 +16,8 @@
     <Compile Update="MainMenu.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="Personnel_ADD.cs">
+      <SubType>Form</SubType>
+    </Compile>
   </ItemGroup>
 </Project>

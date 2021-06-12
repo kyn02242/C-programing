@@ -14,6 +14,6 @@ namespace conveni
         public string WorkingTime { get; set; } 
         // 낮 저녁 새벽 3파트로 나뉨 , 각각 8시간
         public string Gender { get; set; } // 성별
-        public int WorkedTime { get; set; } // 일한 시간
+
     }
 }

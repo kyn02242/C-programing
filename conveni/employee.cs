@@ -27,14 +27,12 @@ namespace conveni
             Close();
         }
 
-        private void EMPLOYEE_DELETE_Click(object sender, EventArgs e)
-        {
 
-        }
 
         private void EMPLOYEE_ADD_Click(object sender, EventArgs e)
         {
-
+            Personnel_ADD personnel_add = new Personnel_ADD();
+            personnel_add.ShowDialog();
         }
 
         private void EMPLOYEE_LIST_SelectedIndexChanged(object sender, EventArgs e)

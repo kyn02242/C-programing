@@ -98,3 +98,7 @@ E:\C#\conveni\obj\Debug\net5.0-windows\ref\conveni.dll
 E:\C#\conveni\obj\Debug\net5.0-windows\conveni.pdb
 E:\C#\conveni\obj\Debug\net5.0-windows\conveni.genruntimeconfig.cache
 E:\C#\conveni\obj\Debug\net5.0-windows\conveni.Goods_ADD.resources
+C:\Users\xnote\Source\Repos\C-programing\conveni\obj\Debug\net5.0-windows\conveni.Employee.resources
+C:\Users\xnote\Source\Repos\C-programing\conveni\obj\Debug\net5.0-windows\conveni.Goods.resources
+C:\Users\xnote\Source\Repos\C-programing\conveni\obj\Debug\net5.0-windows\conveni.Goods_ADD.resources
+C:\Users\xnote\Source\Repos\C-programing\conveni\obj\Debug\net5.0-windows\conveni.Personnel_ADD.resources
