@@ -10,22 +10,9 @@ namespace conveni
 {
     public class Storage
     {
-        private void Read_Write()
-        {
-            string temp = "";
+        public int Id { get; set; }
 
-            XmlTextWriter Merchant = new XmlTextWriter("D:\\help.xml", Encoding.UTF8);
-
-            Merchant.Formatting = Formatting.Indented;
-
-            Merchant.WriteStartDocument();
-            Merchant.WriteStartElement("root");
-
-            Merchant.WriteStartElement("hello");
-
-
-
-
-        }
+        public string Name { get; set; }
+        public int Count { get; set; }
     }
 }
