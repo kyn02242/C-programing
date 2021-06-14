@@ -20,9 +20,9 @@ namespace conveni
         {
             try
             {
-                string PersonnelOutput = File.ReadAllText(@"./Personnels.xml");
-                XElement PersonnelXElement = XElement.Parse(PersonnelOutput);
-                Personnels = (from item in PersonnelXElement.Descendants("personnel")
+                string personnelsOutput = File.ReadAllText(@"./Personnels.xml");
+                XElement personnelsXElement = XElement.Parse(personnelsOutput);
+                Personnels = (from item in personnelsXElement.Descendants("personnel")
                               select new Personnel()
                               {
                                   Id = int.Parse(item.Element("id").Value),
@@ -68,21 +68,25 @@ namespace conveni
         }
         public static void Save()
         {
-            string PersonnelsOutput = "";
-            PersonnelsOutput += "<Personnels>\n";
+            string personnelsOutput = "";
+            personnelsOutput += "<personnels>\n";
             foreach (var item in Personnels)
             {
-                PersonnelsOutput += "<personnel>\n";
-                PersonnelsOutput += "   <id>" + item.Id + "</id>\n";
-                PersonnelsOutput += "   <name>" + item.Name + "</name>\n";
-                PersonnelsOutput += "   <date>" + item.Id + "</date>\n";
-                PersonnelsOutput += "   <workingtime>" + item.WorkingTime + "</workingtime>\n";
-                PersonnelsOutput += "   <gender>" + item.Gender + "</gender>\n";
+                personnelsOutput += "<personnel>\n";
+                personnelsOutput += "   <id>" + item.Id + "</id>\n";
+                personnelsOutput += "   <name>" + item.Name + "</name>\n";
+                personnelsOutput += "   <date>" + item.Id + "</date>\n";
+                personnelsOutput += "   <workingtime>" + item.WorkingTime + "</workingtime>\n";
+                personnelsOutput += "   <gender>" + item.Gender + "</gender>\n";
 
-                PersonnelsOutput += "</personnel>\n";
+                personnelsOutput += "</personnel>\n";
 
             }
-            PersonnelsOutput += "</Personnels>";
+            personnelsOutput += "</personnels>";
+
+
+
+
 
             string ReceiptsOutput = "";
             ReceiptsOutput = "";
@@ -116,10 +120,10 @@ namespace conveni
             }
             ReceiptsOutput += "</storages>";
 
-
+            File.WriteAllText(@"./Personnels.xml", personnelsOutput);
             File.WriteAllText(@"./Storages.xml", StoragesOutput);
             File.WriteAllText(@"./Receipts.xml", ReceiptsOutput);
-            File.WriteAllText(@"./Personnels.xml", PersonnelsOutput);
+           
         }
     }
 }

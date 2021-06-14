@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\xnote\\Source\\Repos\\C-programing_3\\conveni\\conveni.csproj": {}
+    "C:\\Users\\xnote\\Source\\Repos\\C-programing_4\\conveni\\conveni.csproj": {}
   },
   "projects": {
-    "C:\\Users\\xnote\\Source\\Repos\\C-programing_3\\conveni\\conveni.csproj": {
+    "C:\\Users\\xnote\\Source\\Repos\\C-programing_4\\conveni\\conveni.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\xnote\\Source\\Repos\\C-programing_3\\conveni\\conveni.csproj",
+        "projectUniqueName": "C:\\Users\\xnote\\Source\\Repos\\C-programing_4\\conveni\\conveni.csproj",
         "projectName": "conveni",
-        "projectPath": "C:\\Users\\xnote\\Source\\Repos\\C-programing_3\\conveni\\conveni.csproj",
+        "projectPath": "C:\\Users\\xnote\\Source\\Repos\\C-programing_4\\conveni\\conveni.csproj",
         "packagesPath": "C:\\Users\\xnote\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\xnote\\Source\\Repos\\C-programing_3\\conveni\\obj\\",
+        "outputPath": "C:\\Users\\xnote\\Source\\Repos\\C-programing_4\\conveni\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\xnote\\AppData\\Roaming\\NuGet\\NuGet.Config"

@@ -1,2 +1,9 @@
-<Personnels>
-</Personnels>
+<personnels>
+<personnel>
+   <id>1234</id>
+   <name>asdf</name>
+   <date>1234</date>
+   <workingtime>asdf</workingtime>
+   <gender>asdf</gender>
+</personnel>
+</personnels>
