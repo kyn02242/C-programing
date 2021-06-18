@@ -8,24 +8,26 @@
     "net5.0-windows7.0": []
   },
   "packageFolders": {
-    "C:\\Users\\xnote\\.nuget\\packages\\": {}
+    "C:\\Users\\kyn02\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\xnote\\Source\\Repos\\C-programing_4\\conveni\\conveni.csproj",
+      "projectUniqueName": "E:\\C#\\conveni\\conveni.csproj",
       "projectName": "conveni",
-      "projectPath": "C:\\Users\\xnote\\Source\\Repos\\C-programing_4\\conveni\\conveni.csproj",
-      "packagesPath": "C:\\Users\\xnote\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\xnote\\Source\\Repos\\C-programing_4\\conveni\\obj\\",
+      "projectPath": "E:\\C#\\conveni\\conveni.csproj",
+      "packagesPath": "C:\\Users\\kyn02\\.nuget\\packages\\",
+      "outputPath": "E:\\C#\\conveni\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\xnote\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        "C:\\Users\\kyn02\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "net5.0-windows7.0"
       ],
       "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -61,7 +63,7 @@
             "privateAssets": "none"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.300\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.202\\RuntimeIdentifierGraph.json"
       }
     }
   }

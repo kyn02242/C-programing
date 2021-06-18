@@ -148,3 +148,7 @@ C:\Users\xnote\Source\Repos\C-programing_4\conveni\obj\Debug\net5.0-windows\conv
 C:\Users\xnote\Source\Repos\C-programing_4\conveni\obj\Debug\net5.0-windows\ref\conveni.dll
 C:\Users\xnote\Source\Repos\C-programing_4\conveni\obj\Debug\net5.0-windows\conveni.pdb
 C:\Users\xnote\Source\Repos\C-programing_4\conveni\obj\Debug\net5.0-windows\conveni.genruntimeconfig.cache
+E:\C#\conveni\obj\Debug\net5.0-windows\conveni.Personnel_ADD.resources
+E:\C#\conveni\obj\Debug\net5.0-windows\conveni.personal.resources
+E:\C#\conveni\obj\Debug\net5.0-windows\conveni.ERROR.resources
+E:\C#\conveni\obj\Debug\net5.0-windows\conveni.Form1.resources

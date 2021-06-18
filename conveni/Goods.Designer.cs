@@ -29,30 +29,25 @@ namespace conveni
         /// </summary>
         private void InitializeComponent()
         {
-            this.LIST_GOODS = new System.Windows.Forms.ListBox();
             this.ID_GOODS = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.ADD_GOODS = new System.Windows.Forms.Button();
             this.EXIT_GOODS = new System.Windows.Forms.Button();
             this.SEARCH_GOODS = new System.Windows.Forms.Button();
+            this.listView1 = new System.Windows.Forms.ListView();
+            this.ID = new System.Windows.Forms.ColumnHeader();
+            this.name = new System.Windows.Forms.ColumnHeader();
+            this.amount = new System.Windows.Forms.ColumnHeader();
+            this.Price = new System.Windows.Forms.ColumnHeader();
+            this.button1 = new System.Windows.Forms.Button();
             this.SuspendLayout();
-            // 
-            // LIST_GOODS
-            // 
-            this.LIST_GOODS.FormattingEnabled = true;
-            this.LIST_GOODS.ItemHeight = 15;
-            this.LIST_GOODS.Location = new System.Drawing.Point(12, 12);
-            this.LIST_GOODS.Name = "LIST_GOODS";
-            this.LIST_GOODS.Size = new System.Drawing.Size(567, 424);
-            this.LIST_GOODS.TabIndex = 0;
-            this.LIST_GOODS.SelectedIndexChanged += new System.EventHandler(this.listBox1_SelectedIndexChanged);
             // 
             // ID_GOODS
             // 
             this.ID_GOODS.Location = new System.Drawing.Point(610, 21);
             this.ID_GOODS.Name = "ID_GOODS";
             this.ID_GOODS.Size = new System.Drawing.Size(178, 23);
-            this.ID_GOODS.TabIndex = 2;
+            this.ID_GOODS.TabIndex = 1;
             this.ID_GOODS.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.ID_GOODS.TextChanged += new System.EventHandler(this.ID_GOODS_TextChanged);
             // 
@@ -70,8 +65,8 @@ namespace conveni
             this.ADD_GOODS.Location = new System.Drawing.Point(610, 269);
             this.ADD_GOODS.Name = "ADD_GOODS";
             this.ADD_GOODS.Size = new System.Drawing.Size(177, 71);
-            this.ADD_GOODS.TabIndex = 4;
-            this.ADD_GOODS.Text = "상품 추가";
+            this.ADD_GOODS.TabIndex = 3;
+            this.ADD_GOODS.Text = "상품/수량 추가";
             this.ADD_GOODS.UseVisualStyleBackColor = true;
             this.ADD_GOODS.Click += new System.EventHandler(this.ADD_GOODS_Click);
             // 
@@ -80,7 +75,7 @@ namespace conveni
             this.EXIT_GOODS.Location = new System.Drawing.Point(610, 365);
             this.EXIT_GOODS.Name = "EXIT_GOODS";
             this.EXIT_GOODS.Size = new System.Drawing.Size(177, 71);
-            this.EXIT_GOODS.TabIndex = 5;
+            this.EXIT_GOODS.TabIndex = 4;
             this.EXIT_GOODS.Text = "종료";
             this.EXIT_GOODS.UseVisualStyleBackColor = true;
             this.EXIT_GOODS.Click += new System.EventHandler(this.EXIT_GOODS_Click);
@@ -90,22 +85,75 @@ namespace conveni
             this.SEARCH_GOODS.Location = new System.Drawing.Point(674, 50);
             this.SEARCH_GOODS.Name = "SEARCH_GOODS";
             this.SEARCH_GOODS.Size = new System.Drawing.Size(114, 44);
-            this.SEARCH_GOODS.TabIndex = 7;
+            this.SEARCH_GOODS.TabIndex = 2;
             this.SEARCH_GOODS.Text = "검색";
             this.SEARCH_GOODS.UseVisualStyleBackColor = true;
             this.SEARCH_GOODS.Click += new System.EventHandler(this.SEARCH_GOODS_Click);
+            // 
+            // listView1
+            // 
+            this.listView1.AllowColumnReorder = true;
+            this.listView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.ID,
+            this.name,
+            this.amount,
+            this.Price});
+            this.listView1.FullRowSelect = true;
+            this.listView1.GridLines = true;
+            this.listView1.HideSelection = false;
+            this.listView1.Location = new System.Drawing.Point(12, 21);
+            this.listView1.Name = "listView1";
+            this.listView1.Size = new System.Drawing.Size(567, 319);
+            this.listView1.TabIndex = 8;
+            this.listView1.UseCompatibleStateImageBehavior = false;
+            this.listView1.View = System.Windows.Forms.View.Details;
+            this.listView1.SelectedIndexChanged += new System.EventHandler(this.listView1_SelectedIndexChanged);
+            // 
+            // ID
+            // 
+            this.ID.Text = "ID";
+            this.ID.Width = 80;
+            // 
+            // name
+            // 
+            this.name.Text = "이름";
+            this.name.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.name.Width = 203;
+            // 
+            // amount
+            // 
+            this.amount.Text = "수량";
+            this.amount.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.amount.Width = 120;
+            // 
+            // Price
+            // 
+            this.Price.Text = "가격";
+            this.Price.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.Price.Width = 160;
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(12, 357);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(567, 79);
+            this.button1.TabIndex = 0;
+            this.button1.Text = "갱신";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // Goods
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.listView1);
             this.Controls.Add(this.SEARCH_GOODS);
             this.Controls.Add(this.EXIT_GOODS);
             this.Controls.Add(this.ADD_GOODS);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.ID_GOODS);
-            this.Controls.Add(this.LIST_GOODS);
             this.Name = "Goods";
             this.Text = "Goods";
             this.ResumeLayout(false);
@@ -114,12 +162,17 @@ namespace conveni
         }
 
         #endregion
-
-        private System.Windows.Forms.ListBox LIST_GOODS;
         private System.Windows.Forms.TextBox ID_GOODS;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button ADD_GOODS;
         private System.Windows.Forms.Button EXIT_GOODS;
         private System.Windows.Forms.Button SEARCH_GOODS;
+        private System.Windows.Forms.ListView listView1;
+        public System.Windows.Forms.ColumnHeader ID;
+        public System.Windows.Forms.ColumnHeader 이름;
+        public System.Windows.Forms.ColumnHeader amount;
+        public System.Windows.Forms.ColumnHeader name;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.ColumnHeader Price;
     }
 }
