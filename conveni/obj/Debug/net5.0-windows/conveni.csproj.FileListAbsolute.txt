@@ -152,3 +152,7 @@ E:\C#\conveni\obj\Debug\net5.0-windows\conveni.Personnel_ADD.resources
 E:\C#\conveni\obj\Debug\net5.0-windows\conveni.personal.resources
 E:\C#\conveni\obj\Debug\net5.0-windows\conveni.ERROR.resources
 E:\C#\conveni\obj\Debug\net5.0-windows\conveni.Form1.resources
+C:\Users\xnote\Source\Repos\C-programing\conveni\obj\Debug\net5.0-windows\conveni.ERROR.resources
+C:\Users\xnote\Source\Repos\C-programing\conveni\obj\Debug\net5.0-windows\conveni.Form1.resources
+C:\Users\xnote\Source\Repos\C-programing\conveni\obj\Debug\net5.0-windows\conveni.personal.resources
+C:\Users\xnote\Source\Repos\C-programing\conveni\obj\Debug\net5.0-windows\conveni.Properties.Resources.resources

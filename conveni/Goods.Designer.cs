@@ -44,9 +44,10 @@ namespace conveni
             // 
             // ID_GOODS
             // 
-            this.ID_GOODS.Location = new System.Drawing.Point(610, 21);
+            this.ID_GOODS.Location = new System.Drawing.Point(871, 35);
+            this.ID_GOODS.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.ID_GOODS.Name = "ID_GOODS";
-            this.ID_GOODS.Size = new System.Drawing.Size(178, 23);
+            this.ID_GOODS.Size = new System.Drawing.Size(253, 31);
             this.ID_GOODS.TabIndex = 1;
             this.ID_GOODS.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.ID_GOODS.TextChanged += new System.EventHandler(this.ID_GOODS_TextChanged);
@@ -54,40 +55,55 @@ namespace conveni
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(585, 24);
+            this.label1.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.label1.Location = new System.Drawing.Point(836, 40);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(19, 15);
+            this.label1.Size = new System.Drawing.Size(30, 25);
             this.label1.TabIndex = 3;
             this.label1.Text = "ID";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // ADD_GOODS
             // 
-            this.ADD_GOODS.Location = new System.Drawing.Point(610, 269);
+            this.ADD_GOODS.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.ADD_GOODS.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ADD_GOODS.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ADD_GOODS.Location = new System.Drawing.Point(926, 199);
+            this.ADD_GOODS.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.ADD_GOODS.Name = "ADD_GOODS";
-            this.ADD_GOODS.Size = new System.Drawing.Size(177, 71);
+            this.ADD_GOODS.Size = new System.Drawing.Size(163, 90);
             this.ADD_GOODS.TabIndex = 3;
             this.ADD_GOODS.Text = "상품/수량 추가";
-            this.ADD_GOODS.UseVisualStyleBackColor = true;
+            this.ADD_GOODS.UseVisualStyleBackColor = false;
             this.ADD_GOODS.Click += new System.EventHandler(this.ADD_GOODS_Click);
             // 
             // EXIT_GOODS
             // 
-            this.EXIT_GOODS.Location = new System.Drawing.Point(610, 365);
+            this.EXIT_GOODS.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.EXIT_GOODS.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.EXIT_GOODS.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.EXIT_GOODS.Location = new System.Drawing.Point(926, 430);
+            this.EXIT_GOODS.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.EXIT_GOODS.Name = "EXIT_GOODS";
-            this.EXIT_GOODS.Size = new System.Drawing.Size(177, 71);
+            this.EXIT_GOODS.Size = new System.Drawing.Size(163, 90);
             this.EXIT_GOODS.TabIndex = 4;
             this.EXIT_GOODS.Text = "종료";
-            this.EXIT_GOODS.UseVisualStyleBackColor = true;
+            this.EXIT_GOODS.UseVisualStyleBackColor = false;
             this.EXIT_GOODS.Click += new System.EventHandler(this.EXIT_GOODS_Click);
             // 
             // SEARCH_GOODS
             // 
-            this.SEARCH_GOODS.Location = new System.Drawing.Point(674, 50);
+            this.SEARCH_GOODS.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.SEARCH_GOODS.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.SEARCH_GOODS.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.SEARCH_GOODS.Location = new System.Drawing.Point(926, 87);
+            this.SEARCH_GOODS.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.SEARCH_GOODS.Name = "SEARCH_GOODS";
-            this.SEARCH_GOODS.Size = new System.Drawing.Size(114, 44);
+            this.SEARCH_GOODS.Size = new System.Drawing.Size(163, 73);
             this.SEARCH_GOODS.TabIndex = 2;
             this.SEARCH_GOODS.Text = "검색";
-            this.SEARCH_GOODS.UseVisualStyleBackColor = true;
+            this.SEARCH_GOODS.UseVisualStyleBackColor = false;
             this.SEARCH_GOODS.Click += new System.EventHandler(this.SEARCH_GOODS_Click);
             // 
             // listView1
@@ -101,9 +117,10 @@ namespace conveni
             this.listView1.FullRowSelect = true;
             this.listView1.GridLines = true;
             this.listView1.HideSelection = false;
-            this.listView1.Location = new System.Drawing.Point(12, 21);
+            this.listView1.Location = new System.Drawing.Point(17, 35);
+            this.listView1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(567, 319);
+            this.listView1.Size = new System.Drawing.Size(808, 529);
             this.listView1.TabIndex = 8;
             this.listView1.UseCompatibleStateImageBehavior = false;
             this.listView1.View = System.Windows.Forms.View.Details;
@@ -134,19 +151,24 @@ namespace conveni
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(12, 357);
+            this.button1.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Location = new System.Drawing.Point(926, 317);
+            this.button1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(567, 79);
+            this.button1.Size = new System.Drawing.Size(163, 86);
             this.button1.TabIndex = 0;
             this.button1.Text = "갱신";
-            this.button1.UseVisualStyleBackColor = true;
+            this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // Goods
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.BackgroundImage = global::conveni.Properties.Resources.thumb_d_398D2558C2751C55DAB3094C7C67AE66;
+            this.ClientSize = new System.Drawing.Size(1142, 633);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.listView1);
             this.Controls.Add(this.SEARCH_GOODS);
@@ -154,6 +176,7 @@ namespace conveni
             this.Controls.Add(this.ADD_GOODS);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.ID_GOODS);
+            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "Goods";
             this.Text = "Goods";
             this.ResumeLayout(false);

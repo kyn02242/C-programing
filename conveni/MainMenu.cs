@@ -74,6 +74,11 @@ namespace conveni
         {
 
         }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
     public struct Good//구조체 선언
     {
