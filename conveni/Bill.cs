@@ -93,72 +93,80 @@ namespace conveni
 
         }
 
-        private void button2_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void Change_Click(object sender, EventArgs e)
         {
             bool ExitBtnClosing;
-            int rest = Convert.ToInt32(label8.Text);
-            if (rest < 0)
+            if (label6.Text == "")
             {
-                ERROR error = new ERROR();
-                error.ShowDialog();
-                return;
+                MessageBox.Show("구매할 물품을 먼저 골라주세요");
             }
             else
             {
-                if (MessageBox.Show("결제 하시겠습니까?", "결제 확인", MessageBoxButtons.YesNo) == DialogResult.Yes)
+                if (textBox3.Text == "")
                 {
-                    ExitBtnClosing = true;
-                    this.DialogResult = DialogResult.Abort;
-                    for (int i = 0; i < Global.cnt_buy; i++)
+                    ERROR error = new ERROR();
+                    error.ShowDialog();
+                    return;
+                }
+                int rest = Convert.ToInt32(label8.Text);
+                if (rest < 0)
+                {
+                    ERROR error = new ERROR();
+                    error.ShowDialog();
+                    return;
+                }
+                else
+                {
+                    if (MessageBox.Show("결제 하시겠습니까?", "결제 확인", MessageBoxButtons.YesNo) == DialogResult.Yes)
                     {
-                        for(int j = 0; j < Global.cnt; j++)
+                        ExitBtnClosing = true;
+                        this.DialogResult = DialogResult.Abort;
+                        for (int i = 0; i < Global.cnt_buy; i++)
                         {
-                            if(Global.buy_list[i].id == Global.Goods_list[j].id)
+                            for (int j = 0; j < Global.cnt; j++)
                             {
-                                Global.Goods_list[j].amount -= Global.buy_list[i].amount;
-                                Global.Total_money += (Global.buy_list[i].amount) * (Global.buy_list[i].price);
-                                break;
+                                if (Global.buy_list[i].id == Global.Goods_list[j].id)
+                                {
+                                    Global.Goods_list[j].amount -= Global.buy_list[i].amount;
+                                    Global.Total_money += (Global.buy_list[i].amount) * (Global.buy_list[i].price);
+                                    break;
+                                }
                             }
                         }
+                        StreamWriter receipt = new StreamWriter("가장 최근 결제 영수증.txt");
+                        for (int i = 0; i < Global.cnt_buy; i++)
+                        {
+                            receipt.WriteLine("물품 이름 : {0}", Global.buy_list[i].name);
+                            receipt.WriteLine("구매 수량 : {0}", Global.buy_list[i].amount + "개");
+                            receipt.WriteLine("금액 : {0}", (Global.buy_list[i].price) * (Global.buy_list[i].amount) + "원");
+                            receipt.WriteLine("");
+                            Global.buy_list[i].id = 0;
+                            Global.buy_list[i].amount = 0;
+                            Global.buy_list[i].name = null;
+                            Global.buy_list[i].price = 0;
+                        }
+                        receipt.WriteLine("총 지불할 금액 : " + label6.Text + "원");
+                        receipt.WriteLine("지불한 금액 :  " + textBox3.Text + "원");
+                        receipt.WriteLine("되돌려 받을 금액 : " + label8.Text + "원");
+
+                        receipt.Close();
+
+                        Global.cnt_buy = 0;
+
+                        //리스트 출력
+                        StreamWriter sw = new StreamWriter("물건 목록.txt");
+
+                        for (int i = 0; i < Global.cnt; i++)
+                        {
+                            sw.WriteLine(Global.Goods_list[i].id);
+                            sw.WriteLine(Global.Goods_list[i].name);
+                            sw.WriteLine(Global.Goods_list[i].amount);
+                            sw.WriteLine(Global.Goods_list[i].price);
+                        }
+                        sw.Close();
+
+                        Close();
                     }
-                    StreamWriter receipt = new StreamWriter("가장 최근 결제 영수증.txt");
-                    for (int i = 0; i < Global.cnt_buy; i++)
-                    {
-                        receipt.WriteLine("물품 이름 : {0}", Global.buy_list[i].name);
-                        receipt.WriteLine("구매 수량 : {0}", Global.buy_list[i].amount+"개");
-                        receipt.WriteLine("금액 : {0}", (Global.buy_list[i].price) * (Global.buy_list[i].amount) + "원");
-                        receipt.WriteLine("");
-                        Global.buy_list[i].id = 0;
-                        Global.buy_list[i].amount = 0;
-                        Global.buy_list[i].name = null;
-                        Global.buy_list[i].price = 0;
-                    }
-                    receipt.WriteLine("총 지불할 금액 : " + label6.Text + "원");
-                    receipt.WriteLine("지불한 금액 :  " + textBox3.Text + "원");
-                    receipt.WriteLine("되돌려 받을 금액 : " + label8.Text + "원");
-
-                    receipt.Close();
-
-                    Global.cnt_buy = 0;
-                    
-                    //리스트 출력
-                    StreamWriter sw = new StreamWriter("물건 목록.txt");
-
-                    for (int i = 0; i < Global.cnt; i++)
-                    {
-                        sw.WriteLine(Global.Goods_list[i].id);
-                        sw.WriteLine(Global.Goods_list[i].name);
-                        sw.WriteLine(Global.Goods_list[i].amount);
-                        sw.WriteLine(Global.Goods_list[i].price);
-                    }
-                    sw.Close();
-
-                    Close();
                 }
             }
         }
@@ -271,8 +279,24 @@ namespace conveni
 
         private void button1_Click(object sender, EventArgs e)
         {
-            int money = Convert.ToInt32(textBox3.Text);
-            label8.Text = Convert.ToString(money - Convert.ToInt32(label6.Text));
+            if (textBox3.Text != "")
+            {
+                
+                if (label6.Text == "")
+                {
+                    MessageBox.Show("구매할 물품을 먼저 골라주세요");
+                }
+                else
+                {
+                    int money = Convert.ToInt32(textBox3.Text);
+                    label8.Text = Convert.ToString(money - Convert.ToInt32(label6.Text));
+                }
+            }
+            else
+            {
+                ERROR error = new ERROR();
+                error.ShowDialog();
+            }
         }
     }
         

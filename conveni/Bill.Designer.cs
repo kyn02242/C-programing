@@ -31,7 +31,6 @@ namespace conveni
         {
             this.label3 = new System.Windows.Forms.Label();
             this.Change = new System.Windows.Forms.Button();
-            this.Waitexit = new System.Windows.Forms.Button();
             this.exit = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
@@ -78,17 +77,6 @@ namespace conveni
             this.Change.Text = "결제하기";
             this.Change.UseVisualStyleBackColor = true;
             this.Change.Click += new System.EventHandler(this.Change_Click);
-            // 
-            // Waitexit
-            // 
-            this.Waitexit.Location = new System.Drawing.Point(859, 449);
-            this.Waitexit.Margin = new System.Windows.Forms.Padding(2);
-            this.Waitexit.Name = "Waitexit";
-            this.Waitexit.Size = new System.Drawing.Size(86, 47);
-            this.Waitexit.TabIndex = 16;
-            this.Waitexit.Text = "대기";
-            this.Waitexit.UseVisualStyleBackColor = true;
-            this.Waitexit.Click += new System.EventHandler(this.button2_Click);
             // 
             // exit
             // 
@@ -295,7 +283,6 @@ namespace conveni
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.exit);
-            this.Controls.Add(this.Waitexit);
             this.Controls.Add(this.Change);
             this.Controls.Add(this.label3);
             this.Margin = new System.Windows.Forms.Padding(2);
@@ -310,7 +297,6 @@ namespace conveni
 
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button Change;
-        private System.Windows.Forms.Button Waitexit;
         private System.Windows.Forms.Button exit;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;

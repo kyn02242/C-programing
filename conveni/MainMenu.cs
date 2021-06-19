@@ -83,26 +83,10 @@ namespace conveni
             receipt.ShowDialog();
         }
 
-        private void Refund_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void Change_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void MainMenu_Load(object sender, EventArgs e)
         {
 
         }
-
-        private void listView2_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
         private void label1_Click(object sender, EventArgs e)
         {
 
