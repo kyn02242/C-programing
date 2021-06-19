@@ -7,11 +7,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.IO;
 
 namespace conveni
 {
     public partial class Employee : Form
     {
+        StreamWriter sw;
         private Timer Timer = null;
         public Employee()
         {
@@ -60,6 +62,32 @@ namespace conveni
         {
             personal person_add = new personal();
             person_add.ShowDialog();
+            int i = 0;
+
+            listView1.BeginUpdate();//리스트 업데이트 시작
+
+            ListViewItem item;
+
+            listView1.Items.Clear();//리스트 일단 비우고 시작
+
+            while (i < Global.tmp)//리스트에 구조체 배열 넣기
+            {
+                item = new ListViewItem(Global.person_list[i].name);
+                item.SubItems.Add(Global.person_list[i].time);
+
+                listView1.Items.Add(item);//아이템 추가
+
+                i++;
+            }
+            listView1.EndUpdate();//리스트 업데이트 종료
+
+            sw = new StreamWriter("직원 목록.txt");
+            for(i = 0;i<Global.tmp; i++)
+            {
+                sw.WriteLine(Global.person_list[i].name);
+                sw.WriteLine(Global.person_list[i].time);
+            }
+            sw.Close();
         }
 
         private void EMPLOYEE_LIST_SelectedIndexChanged(object sender, EventArgs e)

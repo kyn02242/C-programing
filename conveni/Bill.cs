@@ -7,12 +7,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.IO;
 
 namespace conveni
 {
     public partial class Bill : Form
     {
-
         public Bill()
         {
             InitializeComponent();
@@ -126,14 +126,38 @@ namespace conveni
                             }
                         }
                     }
-                    for(int i = 0; i < Global.cnt_buy; i++)
+                    StreamWriter receipt = new StreamWriter("가장 최근 결제 영수증.txt");
+                    for (int i = 0; i < Global.cnt_buy; i++)
                     {
+                        receipt.WriteLine("물품 이름 : {0}", Global.buy_list[i].name);
+                        receipt.WriteLine("구매 수량 : {0}", Global.buy_list[i].amount+"개");
+                        receipt.WriteLine("금액 : {0}", (Global.buy_list[i].price) * (Global.buy_list[i].amount) + "원");
+                        receipt.WriteLine("");
                         Global.buy_list[i].id = 0;
                         Global.buy_list[i].amount = 0;
                         Global.buy_list[i].name = null;
                         Global.buy_list[i].price = 0;
                     }
+                    receipt.WriteLine("총 지불할 금액 : " + label6.Text + "원");
+                    receipt.WriteLine("지불한 금액 :  " + textBox3.Text + "원");
+                    receipt.WriteLine("되돌려 받을 금액 : " + label8.Text + "원");
+
+                    receipt.Close();
+
                     Global.cnt_buy = 0;
+                    
+                    //리스트 출력
+                    StreamWriter sw = new StreamWriter("물건 목록.txt");
+
+                    for (int i = 0; i < Global.cnt; i++)
+                    {
+                        sw.WriteLine(Global.Goods_list[i].id);
+                        sw.WriteLine(Global.Goods_list[i].name);
+                        sw.WriteLine(Global.Goods_list[i].amount);
+                        sw.WriteLine(Global.Goods_list[i].price);
+                    }
+                    sw.Close();
+
                     Close();
                 }
             }

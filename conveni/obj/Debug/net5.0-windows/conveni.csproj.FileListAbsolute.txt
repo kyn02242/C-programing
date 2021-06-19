@@ -156,3 +156,5 @@ C:\Users\xnote\Source\Repos\C-programing\conveni\obj\Debug\net5.0-windows\conven
 C:\Users\xnote\Source\Repos\C-programing\conveni\obj\Debug\net5.0-windows\conveni.Form1.resources
 C:\Users\xnote\Source\Repos\C-programing\conveni\obj\Debug\net5.0-windows\conveni.personal.resources
 C:\Users\xnote\Source\Repos\C-programing\conveni\obj\Debug\net5.0-windows\conveni.Properties.Resources.resources
+E:\C#\conveni\obj\Debug\net5.0-windows\conveni.Properties.Resources.resources
+E:\C#\conveni\obj\Debug\net5.0-windows\conveni.Receipt.resources

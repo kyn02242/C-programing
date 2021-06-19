@@ -7,15 +7,17 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.IO;
 
 namespace conveni
 {
     public partial class personal : Form
     {
+        
+        
         public personal()
         {
             InitializeComponent();
-
             this.numericUpDown1.Maximum = 3;
             this.numericUpDown1.Minimum = 1;
             this.numericUpDown1.ValueChanged += numericUpDown1_ValueChanged;
@@ -61,6 +63,7 @@ namespace conveni
             dobi.time = label3.Text;
             Global.person_list[Global.tmp] = dobi;
             Global.tmp++;
+            Close();
         }
 
     }

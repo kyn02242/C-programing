@@ -1,21 +1,34 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
+using System.IO;
 
 namespace conveni
 {
-    class Receipt
+    public partial class Receipt : Form
     {
-        //public List<Goods> Merchant = new List<Goods>();
-        public int Id { get; set; }
-        public int Year { get; set; }
-        public int Month { get; set; }
-        public int Date { get; set; }
+        public Receipt()
+        {
+            InitializeComponent();
+            StreamReader sr = new StreamReader("가장 최근 결제 영수증.txt");
+            label1.Text = sr.ReadToEnd();
+            sr.Close();
+        }
 
-        public int Paid { get; set; } // 지불된 금액
-        public int Pay { get; set; } // 돈 낸 금액
-        public int Change { get; set; } // 거스름돈
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Receipt_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
