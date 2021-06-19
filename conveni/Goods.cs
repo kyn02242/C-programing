@@ -89,7 +89,11 @@ namespace conveni
 
         private void SEARCH_GOODS_Click(object sender, EventArgs e)
         {
-            
+            for(int i = 0; i < Global.cnt; i++)
+            {
+                listView1.Items[i].Selected = false;
+                listView1.Items[i].Focused = false;
+            }
             int id = Convert.ToInt32(ID_GOODS.Text);
             for (int i = 0; i < Global.cnt; i++)
             {
@@ -110,29 +114,29 @@ namespace conveni
 
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
+        //private void button1_Click(object sender, EventArgs e)
+        //{
             
-            int i = 0;
+        //    int i = 0;
 
-            listView1.BeginUpdate();//리스트 업데이트 시작
+        //    listView1.BeginUpdate();//리스트 업데이트 시작
 
-            ListViewItem item;
+        //    ListViewItem item;
 
-            listView1.Items.Clear();//리스트 일단 비우고 시작
+        //    listView1.Items.Clear();//리스트 일단 비우고 시작
 
-            while (i < Global.cnt)//리스트에 구조체 배열 넣기
-            {
-                item = new ListViewItem(Global.Goods_list[i].id.ToString());
-                item.SubItems.Add(Global.Goods_list[i].name);
-                item.SubItems.Add(Global.Goods_list[i].amount.ToString()+"개");
-                item.SubItems.Add(Global.Goods_list[i].price.ToString()+"원");
+        //    while (i < Global.cnt)//리스트에 구조체 배열 넣기
+        //    {
+        //        item = new ListViewItem(Global.Goods_list[i].id.ToString());
+        //        item.SubItems.Add(Global.Goods_list[i].name);
+        //        item.SubItems.Add(Global.Goods_list[i].amount.ToString()+"개");
+        //        item.SubItems.Add(Global.Goods_list[i].price.ToString()+"원");
 
-                listView1.Items.Add(item);//아이템 추가
-                i++;
-            }
-            listView1.EndUpdate();//리스트 업데이트 종료
-        }
+        //        listView1.Items.Add(item);//아이템 추가
+        //        i++;
+        //    }
+        //    listView1.EndUpdate();//리스트 업데이트 종료
+        //}
 
         private void label1_Click(object sender, EventArgs e)
         {

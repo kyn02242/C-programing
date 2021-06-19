@@ -95,28 +95,28 @@ namespace conveni
 
         }
 
-        private void button1_Click(object sender, EventArgs e)//갱신버튼 클릭 1.시간 최신화 2.리스트 최신화
-        {
+        //private void button1_Click(object sender, EventArgs e)//갱신버튼 클릭 1.시간 최신화 2.리스트 최신화
+        //{
             
-            int i = 0;
+        //    int i = 0;
 
-            listView1.BeginUpdate();//리스트 업데이트 시작
+        //    listView1.BeginUpdate();//리스트 업데이트 시작
 
-            ListViewItem item;
+        //    ListViewItem item;
 
-            listView1.Items.Clear();//리스트 일단 비우고 시작
+        //    listView1.Items.Clear();//리스트 일단 비우고 시작
 
-            while (i < Global.tmp)//리스트에 구조체 배열 넣기
-            {
-                item = new ListViewItem(Global.person_list[i].name);
-                item.SubItems.Add(Global.person_list[i].time);
+        //    while (i < Global.tmp)//리스트에 구조체 배열 넣기
+        //    {
+        //        item = new ListViewItem(Global.person_list[i].name);
+        //        item.SubItems.Add(Global.person_list[i].time);
 
-                listView1.Items.Add(item);//아이템 추가
+        //        listView1.Items.Add(item);//아이템 추가
 
-                i++;
-            }
-            listView1.EndUpdate();//리스트 업데이트 종료
-        }
+        //        i++;
+        //    }
+        //    listView1.EndUpdate();//리스트 업데이트 종료
+        //}
 
         private void Timer_Tick(object sender, EventArgs e)
         {
